@@ -1,3 +1,29 @@
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.NoActionBar"/>
+	<style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textColorPrimary">@color/white</item>
+		<item name="android:windowBackground">@color/white</item>
+		<item name="android:statusBarColor">@color/colorPrimaryDark</item>
+	</style>
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+				android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+				android:background="@color/colorPrimary" app:layout_scrollFlags="scroll|enterAlways"
+				app:popupTheme="@style/AppTheme.PopupOverlay">
+				<TextView android:id="@+id/toolbar_title" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="@string/app_name"
+					android:textColor="@color/white" android:textSize="18sp"
+					android:textStyle="bold" />
+			</androidx.appcompat.widget.Toolbar>
+		</com.google.android.material.appbar.AppBarLayout>
+		<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+			android:orientation="vertical" android:layout_below="@id/toolbar">
+		</LinearLayout>
+	</RelativeLayout>
 </resources>
